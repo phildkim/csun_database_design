@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+:root {
+  --bg-error: #fff1f1;
+  --bg-success: #fff;
+  --err-msg: #CC0300;
+  --err-span: #ff0000;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+  position: sticky;
+  top:0;
+  height: 50px;
+}
+
+.signupFormInput label,
+.loginFormInput label {
+  font-size: 18px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.signupFormInput.error input,
+.loginFormInput.error input {
+  background-color: var(--bg-error);
+}
+
+.signupFormInput.success input,
+.loginFormInput.success input {
+  background-color: var(--bg-success);
+}
+
+.inputForm1 input[type=text], 
+.inputForm1 input[type=password] {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.signupFormSubmit span,
+.loginFormSubmit span {
+  color: var(--err-msg);
+  padding-bottom: 10px;
+  font-style: italic;
+  font-weight: bolder;
+  font-size: large;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.signupFormInput span,
+.loginFormInput span {
+  color: var(--err-span);
+  font-size: inherit;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+#message,
+span.visible  {
+  display: block;
+}
+
+#message,
+span.invisible {
+  display: none;
+}
+
+#signupLabel,
+#loginLabel {
+  font-weight: bolder;
+  text-transform: uppercase;
+  align: center;
+}
+
+#signupMessage,
+#loginMessage {
+  color: var(--err-span);
+  font-size: large;
+  font-style: italic;
+  font-weight: bolder;
+  float: left;
+}
+
+#ptable,
+#ftable {
+  width: 100%; 
+  max-height: 550px; 
+  overflow: auto;
+}
